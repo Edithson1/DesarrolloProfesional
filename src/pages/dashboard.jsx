@@ -15,6 +15,9 @@ import { Routes, Route, useNavigate, useLocation, Navigate } from 'react-router-
 import EmpresaProfile from './dashboard/EmpresaProfile';
 import WelcomePage from './dashboard/WelcomePage';
 import DiscoverTalent from './dashboard/DiscoverTalent';
+import OfertasProyectos from './dashboard/OfertasProyectos';
+import SistemaCalificaciones from './dashboard/SistemaCalificaciones';
+import CommunityCenter from './dashboard/CommunityCenter';
 
 const DashboardScreen = ({ userData, onNavigate, setUserData }) => {
   const navigate = useNavigate();
@@ -48,11 +51,11 @@ const DashboardScreen = ({ userData, onNavigate, setUserData }) => {
       <Route path="perfil" element={<EmpresaProfile />} />
       <Route path="empresa" element={<EmpresaProfile />} />
       <Route path="explorar" element={<DiscoverTalent  />} />
-      <Route path="ofertas" element={<EmpresaProfile />} />
-      <Route path="calificaciones" element={<EmpresaProfile />} />
+      <Route path="ofertas" element={<OfertasProyectos />} />
+      <Route path="calificaciones" element={<SistemaCalificaciones/>} />
       <Route path="mensajes" element={<EmpresaProfile />} />
       <Route path="panel" element={<EmpresaProfile />} />
-      <Route path="recursos" element={<EmpresaProfile />} />
+      <Route path="recursos" element={<CommunityCenter />} />
       <Route path="configuracion" element={<EmpresaProfile />} />
     </Routes>
   );
@@ -73,7 +76,7 @@ const DashboardScreen = ({ userData, onNavigate, setUserData }) => {
             <NavigationItem icon={Star} label="CALIFICACIONES" tabKey="calificaciones" />
             <NavigationItem icon={MessageSquare} label="MENSAJES" tabKey="mensajes" />
             <NavigationItem icon={BarChart2} label="PANEL" tabKey="panel" />
-            <NavigationItem icon={BookOpen} label="RECURSOS" tabKey="recursos" />
+            <NavigationItem icon={BookOpen} label="RECURSOS" tabKey="recursos"/>
             <NavigationItem icon={Settings} label="CONFIGURACIÓN" tabKey="configuracion" />
           </nav>
         </aside>

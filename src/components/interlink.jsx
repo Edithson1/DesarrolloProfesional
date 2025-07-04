@@ -16,13 +16,11 @@ import ThemeSwitcherFloat from './ui/ThemeSwitcherFloat'
 
 
 const AppRoutes = () => {
-  const navigate = useNavigate();
   const [userData, setUserData] = useState(() => {
   
   const storedData = localStorage.getItem('userData');
   return storedData ? JSON.parse(storedData) : {};
   });
-  console.log(userData);
 
   useEffect(() => {
     localStorage.setItem('userData', JSON.stringify(userData));
@@ -42,7 +40,6 @@ const AppRoutes = () => {
             <PublicRoute userData={userData}>
               <RegisterScreen
                 userData={userData}
-                navigate={navigate}
                 setUserData={setUserData}
               />
             </PublicRoute>
@@ -53,7 +50,6 @@ const AppRoutes = () => {
           element={
             <PublicRoute userData={userData}>
               <LoginScreen 
-                navigate={navigate} 
                 setUserData={setUserData} 
               />
             </PublicRoute>
@@ -66,7 +62,6 @@ const AppRoutes = () => {
               <DashboardScreen
                 userData={userData}
                 setUserData={setUserData}
-                navigate={navigate}
               />
             </PrivateRoute>
           }

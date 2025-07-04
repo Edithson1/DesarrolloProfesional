@@ -29,12 +29,6 @@ export const ThemeProvider = ({ children }) => {
       }
 
       setResolvedTheme(finalTheme);
-
-      // ✅ aquí el cambio importante
-      document.documentElement.classList.remove('light', 'dark');
-      document.documentElement.classList.add(finalTheme);
-
-      // opcional para inspección
       document.documentElement.setAttribute('data-theme', finalTheme);
     };
 
@@ -50,7 +44,6 @@ export const ThemeProvider = ({ children }) => {
       };
     }
   }, [theme]);
-
 
   const setThemePreference = (newTheme) => {
     setTheme(newTheme);

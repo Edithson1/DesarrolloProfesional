@@ -7,7 +7,6 @@ import {
   ClipboardList,
   Star,
   MessageSquare,
-  BarChart2,
   BookOpen,
   Settings
 } from 'lucide-react';
@@ -18,6 +17,7 @@ import DiscoverTalent from './dashboard/DiscoverTalent';
 import OfertasProyectos from './dashboard/OfertasProyectos';
 import SistemaCalificaciones from './dashboard/SistemaCalificaciones';
 import CommunityCenter from './dashboard/CommunityCenter';
+import ConfiguracionCuenta from './dashboard/ConfiguracionCuenta';
 
 const DashboardScreen = ({ userData, onNavigate, setUserData }) => {
   const navigate = useNavigate();
@@ -54,9 +54,8 @@ const DashboardScreen = ({ userData, onNavigate, setUserData }) => {
       <Route path="ofertas" element={<OfertasProyectos />} />
       <Route path="calificaciones" element={<SistemaCalificaciones/>} />
       <Route path="mensajes" element={<EmpresaProfile />} />
-      <Route path="panel" element={<EmpresaProfile />} />
       <Route path="recursos" element={<CommunityCenter />} />
-      <Route path="configuracion" element={<EmpresaProfile />} />
+      <Route path="configuracion" element={<ConfiguracionCuenta />} />
     </Routes>
   );
 
@@ -65,7 +64,12 @@ const DashboardScreen = ({ userData, onNavigate, setUserData }) => {
       <div className="dashboard-container theme-bg-primary">
         <aside className="fixed top-0 left-0 h-screen w-[250px] theme-card z-40">
           <div className="sidebar-header">
-            <div className="sidebar-title">INTERNLINK</div>
+            <div className="flex items-center gap-2">
+                  <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                    <span className="text-white font-bold text-sm">IL</span>
+                  </div>
+                  <span className="font-bold text-xl theme-text-primary">INTERNLINK</span>
+            </div>
           </div>
           <nav className="sidebar-nav">
             <NavigationItem icon={Home} label="INICIO" tabKey="inicio" />
@@ -75,17 +79,12 @@ const DashboardScreen = ({ userData, onNavigate, setUserData }) => {
             <NavigationItem icon={ClipboardList} label="OFERTAS" tabKey="ofertas" />
             <NavigationItem icon={Star} label="CALIFICACIONES" tabKey="calificaciones" />
             <NavigationItem icon={MessageSquare} label="MENSAJES" tabKey="mensajes" />
-            <NavigationItem icon={BarChart2} label="PANEL" tabKey="panel" />
             <NavigationItem icon={BookOpen} label="RECURSOS" tabKey="recursos"/>
             <NavigationItem icon={Settings} label="CONFIGURACIÓN" tabKey="configuracion" />
           </nav>
         </aside>
 
         <main className="ml-[250px] flex-1">
-          <header className="sticky top-0 z-[100] dashboard-header theme-card">
-            <div className="header-title">Dashboard</div>
-            <div className="header-user">{userData?.tipo_usuario}</div>
-          </header>
 
           <section className="dashboard-content relative">
             {routes}

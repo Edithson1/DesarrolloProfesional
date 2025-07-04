@@ -4,7 +4,6 @@ import {
   Routes,
   Route,
   Navigate,
-  useNavigate,
 } from 'react-router-dom';
 import PublicRoute from './ResetRoute';
 import PrivateRoute from './PrivateRoute';

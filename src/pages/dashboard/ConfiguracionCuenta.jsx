@@ -115,8 +115,7 @@ const ConfiguracionCuenta = () => {
         {/* Sidebar */}
         <div className="w-64 theme-card theme-border border-r min-h-screen">
           <div className="sidebar-header">
-            <h1 className="theme-text-primary">INTERNLINK</h1>
-            <p className="text-sm theme-text-secondary">Configuración</p>
+            <h1 className="theme-text-primary">Configuración</h1>
           </div>
           
           <nav className="sidebar-nav">

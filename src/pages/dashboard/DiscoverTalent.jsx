@@ -153,12 +153,8 @@ const DiscoverTalent = () => {
             <div className="flex justify-between items-center h-16">
               <div className="flex items-center gap-4">
                 <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold text-sm">IL</span>
-                  </div>
-                  <span className="font-bold text-xl theme-text-primary">INTERNLINK</span>
+                  <span className="font-bold text-xl theme-text-primary">Descubrir Talento</span>
                 </div>
-                <span className="hidden md:block theme-text-secondary">/ Descubrir Talento</span>
               </div>
               
               <div className="flex items-center gap-4">

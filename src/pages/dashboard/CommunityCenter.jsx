@@ -377,7 +377,7 @@ const CommunityCenter = () => {
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <div>
-                  <h1 className="text-sm theme-text-secondary">Centro de Recursos</h1>
+                  <h1 className="text-white font-bold text-lg">Centro de Recursos</h1>
                 </div>
               </div>
               

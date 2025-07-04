@@ -376,12 +376,8 @@ const CommunityCenter = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-lg">IL</span>
-                </div>
                 <div>
-                  <h1 className="text-xl font-bold theme-text-primary">INTERNLINK</h1>
-                  <p className="text-sm theme-text-secondary">Centro de Recursos</p>
+                  <h1 className="text-sm theme-text-secondary">Centro de Recursos</h1>
                 </div>
               </div>
               
